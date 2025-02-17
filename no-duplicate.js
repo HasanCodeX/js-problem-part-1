@@ -1,15 +1,21 @@
-function noDuplicate(array) {
-    return [...new Set(array)];
+/**
+ * array has some duplicate elements
+ * []
+*/
+
+const biryaniKhor = ['abul', 'babul', 'cabul', 'abul', 'babul', 'dabul', 'kabul', 'cabul'];
+const numbers = [1, 5, 61, 5, 87, 7, 5, 81, 61];
+
+
+function noDuplicate(array){
+    const unique = [];
+    for(const item of array){
+        if(unique.includes(item) === false){
+            unique.push(item);
+        }
+    }
+    return unique;
 }
 
-function removeDuplicates(array) {
-    return array.filter((item, index) => array.indexOf(item) === index);
-}
-
-// Example usage:
-const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
-const uniqueArray = removeDuplicates(arrayWithDuplicates);
-console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
-const anotherArrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
-const anotherUniqueArray = noDuplicate(anotherArrayWithDuplicates);
-console.log(anotherUniqueArray); // Output: [1, 2, 3, 4, 5]
+const uniqueArray = noDuplicate(numbers);
+console.log(uniqueArray);

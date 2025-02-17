@@ -1,10 +1,21 @@
 let a = 5;
-let b = 10;
+let b = 7;
 
-// Swapping the values
-let temp = a;
+console.log(a, b);
+// a = b;
+// b = a;
+
+const temp = a;
 a = b;
 b = temp;
+console.log(a, b);
 
-console.log('a:', a); // a: 10
-console.log('b:', b); // b: 5
+// -----------------------
+let x = 5; 
+let y = 7; 
+
+console.log(x, y);
+[x, y] = [y, x];
+console.log(x, y);
+
+// -----------------------

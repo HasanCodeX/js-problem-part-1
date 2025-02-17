@@ -1,10 +1,10 @@
-function getFormattedDate() {
-    const today = new Date();
-    const day = String(today.getDate()).padStart(2, '0');
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-    const year = today.getFullYear();
+const today = new Date();
+const date = new Date('2062-10-19')
+console.log(date.getMonth());
+console.log(date.getDay());
+const specificDate = new Date(2091, 0, 26)
+console.log(specificDate)
+specificDate.setMonth(10);
+console.log(specificDate.toLocaleString('en-GB'));
 
-    return `${day}/${month}/${year}`;
-}
-
-console.log(getFormattedDate());
+// unix epoc
